@@ -1,22 +1,20 @@
-import java.lang.reflect.Field;
-import java.util.Arrays;
+import java.util.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Standard {
-    public static void main(String... args){
-        Student s1=new Student("annie",101,"CSE");
-        Student s2=new Student("SELCI",102,"CSE");
-        Student s3=new Student("FRANS",103,"ECE");
-        Student s4=new Student("MALIK",104,"IT");
-        Student s5=new Student("AAYISHA",105,"EEE");
+    public static void main(String s[]) {
+        StuDetail[] arr = {
+                new StuDetail(111, "annie", "chennai"),
+                new StuDetail(110, "john", "madurai"),
+                new StuDetail(123, "banu", "vellore"),
+                new StuDetail(112, "doll", "tvm")};
+        Arrays.sort(arr, new Sortbyroll());
+        System.out.println("sorted by rollNum");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
 
-
-
-    }
-    public static void display(){
-        
-
-
+        }
     }
 }
